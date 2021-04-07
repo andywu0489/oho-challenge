@@ -1,9 +1,14 @@
+.fa-folder {
+  margin-right: 10px;
+}
+
 header {
+  font-family: "Open Sans Condensed", sans-serif;
   width: 350px;
 }
 
 .card1__img {
-  background-image: url("./images/nature1.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/nature1.jpeg");
 }
 
 .card2__img {
@@ -33,10 +38,12 @@ header {
 }
 
 .card__category {
+  font-family: "Open Sans Condensed", sans-serif;
   grid-area: category;
 }
 
 .card__title {
+  font-family: "Open Sans Condensed", sans-serif;
   grid-area: title;
 }
 
@@ -141,19 +148,6 @@ body {
   color: #d21533;
 }
 
-.title {
-  color: white;
-}
-
-.arrow--red {
-  color: #d21533;
-}
-
-img {
-  height: 50%;
-  width: 100%;
-}
-
 @media only screen and (max-width: 425px) {
   body {
     display: flex;
@@ -219,6 +213,10 @@ img {
     width: 90%;
     color: black;
     margin-left: 0;
+  }
+
+  .card1__img {
+    background-image: url("./images/nature1.jpeg");
   }
 }
 
