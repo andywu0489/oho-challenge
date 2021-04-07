@@ -8,11 +8,11 @@ header {
 }
 
 .card1__img {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/nature1.jpeg") no-repeat center/contain;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/nature1.jpeg") no-repeat center/cover;
 }
 
 .card2__img {
-  background: url("./images/photo-1469212044023-0e55b4b9745a.jpeg") no-repeat center/contain;
+  background: url("./images/photo-1469212044023-0e55b4b9745a.jpeg") no-repeat center/cover;
 }
 
 .card3__img {
@@ -20,11 +20,11 @@ header {
 }
 
 .card4__img {
-  background: url("./images/beautiful_natural_scenery_02_hd_pictures_166250.jpeg") no-repeat center/contain;
+  background: url("./images/beautiful_natural_scenery_02_hd_pictures_166250.jpeg") no-repeat center/cover;
 }
 
 .card5__img {
-  background: url("./images/hd_picture_of_the_beautiful_natural_scenery_04_169926.jpeg") no-repeat center/contain;
+  background: url("./images/hd_picture_of_the_beautiful_natural_scenery_04_169926.jpeg") no-repeat center/cover;
 }
 
 .card__img {
@@ -239,7 +239,7 @@ body {
   }
 
   .card1__img {
-    background: url("./images/nature1.jpeg") no-repeat center/contain;
+    background: url("./images/nature1.jpeg") no-repeat center/cover;
   }
 }
 
