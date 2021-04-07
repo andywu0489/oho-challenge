@@ -1,3 +1,57 @@
+.card1__img {
+  background-image: url("./images/nature1.jpeg");
+  display: inline-block;
+  position: relative;
+}
+
+.card2__img {
+  background-image: url("./images/photo-1469212044023-0e55b4b9745a.jpeg");
+}
+
+.card3__img {
+  background-image: url("./images/453.jpeg");
+}
+
+.card4__img {
+  background-image: url("./images/beautiful_natural_scenery_02_hd_pictures_166250.jpeg");
+}
+
+.card5__img {
+  background-image: url("./images/hd_picture_of_the_beautiful_natural_scenery_04_169926.jpeg");
+}
+
+.card__img {
+  grid-area: img;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 2px;
+}
+
+.card__category {
+  grid-area: category;
+}
+
+.card__title {
+  grid-area: title;
+}
+
+.card__summary {
+  grid-area: summary;
+}
+
+.card__play {
+  margin: 5px;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 body {
   padding: 20px 150px;
 }
@@ -18,27 +72,24 @@ body {
 
 .card1 {
   grid-area: card1;
-  background: blue;
+  background-image: url("./images/nature1.jpeg");
+  background-size: cover;
 }
 
 .card2 {
   grid-area: card2;
-  background: red;
 }
 
 .card3 {
   grid-area: card3;
-  background: orange;
 }
 
 .card4 {
   grid-area: card4;
-  background: green;
 }
 
 .card5 {
   grid-area: card5;
-  background: purple;
 }
 
 .underline--red {
@@ -51,14 +102,40 @@ body {
 
 .card--regular {
   width: 345px;
-}
-
-.fa-long-arrow-alt-right {
-  color: #222222;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas: "img" "img" "img" "category" "title" "summary";
+  align-items: center;
 }
 
 .fa-play {
   color: #d21533;
+}
+
+.title {
+  color: white;
+}
+
+.arrow--red {
+  color: #d21533;
+}
+
+img {
+  height: 50%;
+  width: 100%;
+}
+
+.card__img-container {
+  display: inline-block;
+}
+
+.positioning {
+  width: 50%;
+  position: absolute;
+  left: 15px;
+  bottom: 30px;
+  color: white;
 }
 
 @media only screen and (max-width: 425px) {
@@ -93,6 +170,15 @@ body {
 
   header {
     width: 350px;
+  }
+
+  .card--regular {
+    width: 345px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "img category category" "img title title";
+    align-items: center;
   }
 }
 
