@@ -1,3 +1,7 @@
+header {
+  width: 350px;
+}
+
 .card1__img {
   background-image: url("./images/nature1.jpeg");
 }
@@ -56,7 +60,6 @@ body {
 
 .card {
   height: 400px;
-  position: relative;
 }
 
 .cards {
@@ -70,8 +73,6 @@ body {
 
 .card1 {
   grid-area: card1;
-  background-image: url("./images/nature1.jpeg");
-  background-size: cover;
 }
 
 .card2 {
@@ -94,8 +95,36 @@ body {
   color: #d21533;
 }
 
+.card1__img {
+  grid-area: 1/1/9/2;
+}
+
+.card1__category {
+  grid-area: 5/1/6/2;
+}
+
+.card1__title {
+  grid-area: 6/1/7/2;
+}
+
+.card1__summary {
+  grid-area: 7/1/8/2;
+}
+
 .card--big {
-  width: 730px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(8, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.card1__category,
+.card1__title,
+.card1__summary {
+  width: 50%;
+  color: white;
+  margin-left: 40px;
 }
 
 .card--regular {
@@ -125,14 +154,6 @@ img {
   width: 100%;
 }
 
-.positioning {
-  width: 50%;
-  position: absolute;
-  left: 15px;
-  bottom: 30px;
-  color: white;
-}
-
 @media only screen and (max-width: 425px) {
   body {
     display: flex;
@@ -146,38 +167,21 @@ img {
 
   .cards {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(7, 1fr);
+    grid-template-rows: repeat(8, 1fr);
     grid-gap: 40px;
-    grid-template-areas: "card1" "card1" "card1" "card2" "card3" "card4" "card5";
+    grid-template-areas: "card1" "card1" "card1" "card1" "card2" "card3" "card4" "card5";
     width: 350px;
     margin: 0;
   }
 
-  .card {
-    height: 75px;
-    width: 350px;
-  }
-
-  .card--big {
-    height: 100%;
-    width: 350px;
-  }
-
-  header {
-    width: 350px;
-  }
-
   .card--regular {
+    height: 75px;
     width: 345px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas: "img category category" "img title title";
     align-items: center;
-  }
-
-  .positioning {
-    width: 100%;
   }
 
   .card--regular > .card__summary {
@@ -191,6 +195,30 @@ img {
 
   .card--regular > .card__img > .card__play > .fa-play {
     font-size: 10px;
+  }
+
+  .card1__img {
+    grid-area: 1/1/6/2;
+  }
+
+  .card1__category {
+    grid-area: 6/1/7/2;
+  }
+
+  .card1__title {
+    grid-area: 7/1/8/2;
+  }
+
+  .card1__summary {
+    grid-area: 8/1/9/2;
+  }
+
+  .card1__category,
+.card1__title,
+.card1__summary {
+    width: 90%;
+    color: black;
+    margin-left: 0;
   }
 }
 
