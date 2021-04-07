@@ -3,8 +3,8 @@ $gray: #222222;
 
 .card1__img {
     background-image: url('./images/nature1.jpeg');
-    display: inline-block;
-    position: relative;
+    // display: inline-block;
+    // position: relative;
 }
 
 .card2__img {
@@ -30,7 +30,7 @@ $gray: #222222;
     background-size: cover;
     display: flex;
     justify-content: flex-end;
-    border-radius: 2px;
+    border-radius: 3px;
 }
 
 .card__category {
@@ -46,7 +46,7 @@ $gray: #222222;
 }
 
 .card__play {
-    margin: 5px;
+    margin: 10px;
     width: 40px;
     height: 40px;
     background-color: white;
@@ -83,22 +83,18 @@ body {
 
 .card2 {
     grid-area: card2;
-    // background: red;
 }
 
 .card3 {
     grid-area: card3;
-    // background: orange;
 }
 
 .card4 {
     grid-area: card4;
-    // background: green;
 }
 
 .card5 {
     grid-area: card5;
-    // background: purple;
 }
 
 .underline--red {
@@ -113,15 +109,18 @@ body {
     width: 345px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(9, 1fr);
     grid-template-areas:
+        "img"
+        "img"
+        "img"
         "img"
         "img"
         "img"
         "category"
         "title"
         "summary";
-    // grid-gap: 40px;
+    grid-gap: 10px;
     align-items: center;
 }
 
@@ -142,21 +141,12 @@ img {
     width: 100%;
 }
 
-.card__img-container {
-    display: inline-block;
-    // position: relative;
-}
-
 .positioning {
     width: 50%;
     position: absolute;
     left: 15px;
     bottom: 30px;
-    // background-color: red;
     color: white;
-    // padding: 4px;
-    // font-size: 17px;
-    // line-height: 18px;
 }
 
 
@@ -174,7 +164,7 @@ img {
     .cards {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(7, 1fr);
-        grid-gap: 10px;
+        grid-gap: 40px;
         grid-template-areas:
             'card1'
             'card1'
@@ -189,7 +179,7 @@ img {
     }
 
     .card {
-        height: 100px;
+        height: 75px;
         width: 350px;
     }
 
@@ -212,5 +202,22 @@ img {
             "img title title";
         // grid-gap: 40px;
         align-items: center;
+    }
+
+    .positioning {
+        width: 100%;
+    }
+
+    .card--regular>.card__summary {
+        display: none;
+    }
+
+    .card--regular>.card__img>.card__play {
+        width: 25px;
+        height: 25px;
+    }
+
+    .card--regular>.card__img>.card__play>.fa-play {
+        font-size: 10px;
     }
 }
