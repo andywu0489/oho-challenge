@@ -168,7 +168,8 @@ body {
 }
 
 .card--regular {
-  width: 345px;
+  width: 100%;
+  min-width: 350px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(9, 1fr);
