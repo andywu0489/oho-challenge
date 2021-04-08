@@ -1,3 +1,8 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .fa-folder {
   margin-right: 10px;
 }
@@ -6,6 +11,7 @@
   font-family: "Open Sans Condensed", sans-serif;
   width: 350px;
   margin: 40px 0;
+  font-weight: normal;
 }
 
 .card1__img {
@@ -40,6 +46,7 @@
 
 .card__category {
   grid-area: category;
+  margin-top: 20px;
 }
 
 .card__title {
@@ -146,8 +153,10 @@ body {
 .card1__category,
 .card1__title,
 .card1__summary {
-  margin: 0;
   font-family: "Open Sans Condensed", sans-serif;
+  width: 45%;
+  color: white;
+  margin: 0 0 0 40px;
 }
 
 .card--big {
@@ -156,14 +165,6 @@ body {
   grid-template-rows: repeat(8, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-}
-
-.card1__category,
-.card1__title,
-.card1__summary {
-  width: 45%;
-  color: white;
-  margin-left: 40px;
 }
 
 .card--regular {
