@@ -1,6 +1,13 @@
 $red: #d21533;
 $gray: #222222;
 
+.card__image-container {
+    grid-area: 1 / 1 / 7 / 2;
+    position: relative;
+    height: 100%;
+    width: 100%
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -18,48 +25,34 @@ a {
 }
 
 .card1__img {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/nature1.jpeg') no-repeat center/cover;
+    grid-area: 1 / 1 / 9 / 2;
 }
 
-.card2__img {
-    background: url('./images/photo-1469212044023-0e55b4b9745a.jpeg') no-repeat center/cover;
-}
-
-.card3__img {
-    background: url('./images/453.jpeg') no-repeat center/contain;
-}
-
-.card4__img {
-    background: url('./images/beautiful_natural_scenery_02_hd_pictures_166250.jpeg') no-repeat center/cover;
-}
-
-.card5__img {
-    background: url('./images/hd_picture_of_the_beautiful_natural_scenery_04_169926.jpeg') no-repeat center/cover;
+.card--darken {
+    filter: brightness(50%);
 }
 
 .card__img {
-    grid-area: img;
+    display: block;
     height: 100%;
     width: 100%;
     background-size: cover;
-    display: flex;
-    justify-content: flex-end;
     border-radius: 3px;
 }
 
 .card__category {
-    grid-area: category;
+    grid-area: 7 / 1 / 8 / 2;
     margin-top: 20px;
 }
 
 .card__title {
-    grid-area: title;
+    grid-area: 8 / 1 / 9 / 2;
 }
 
 .card__summary {
     margin: 0;
     font-family: 'Cormorant Garamond', serif;
-    grid-area: summary;
+    grid-area: 9 / 1 / 10 / 2;
 }
 
 .card__category,
@@ -84,6 +77,9 @@ a {
 }
 
 .card__play {
+    position: absolute;
+    top: 0;
+    right: 0;
     border: none;
     margin: 10px;
     width: 35px;
@@ -137,10 +133,6 @@ body {
     color: $red
 }
 
-.card1__img {
-    grid-area: 1 / 1 / 9 / 2;
-}
-
 .card1__category {
     display: flex;
     align-items: center;
@@ -148,6 +140,7 @@ body {
 }
 
 .card1__title {
+    z-index: 1;
     grid-area: 6 / 1 / 7 / 2;
 }
 
@@ -158,6 +151,7 @@ body {
 .card1__category,
 .card1__title,
 .card1__summary {
+    z-index: 1;
     font-family: 'Open Sans Condensed', sans-serif;
     width: 45%;
     color: white;
@@ -178,16 +172,6 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(9, 1fr);
-    grid-template-areas:
-        "img"
-        "img"
-        "img"
-        "img"
-        "img"
-        "img"
-        "category"
-        "title"
-        "summary";
     grid-gap: 10px;
     align-items: center;
 }
@@ -234,9 +218,6 @@ body {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        grid-template-areas:
-            "img category category"
-            "img title title";
         align-items: center;
     }
 
@@ -244,17 +225,13 @@ body {
         display: none;
     }
 
-    .card--regular>.card__img>.card__play {
+    .card--regular>.card__image-container>.card__play {
         width: 25px;
         height: 25px;
     }
 
     .card--regular>.card__img>.card__play>.fa-play {
         font-size: 10px;
-    }
-
-    .card1__img {
-        grid-area: 1 / 1 / 6 / 2;
     }
 
     .card1__category {
@@ -279,11 +256,27 @@ body {
         margin: 0;
     }
 
-    .card1__img {
-        background: url('./images/nature1.jpeg') no-repeat center/cover;
-    }
-
     .fa-folder {
         color: $gray;
+    }
+
+    .card__image-container {
+        grid-area: 1 / 1 / 3 / 2;
+    }
+
+    .card__category {
+        grid-area: 1 / 2 / 2 / 4;
+    }
+
+    .card__title {
+        grid-area: 2 / 2 / 3 / 4;
+    }
+
+    .card--darken {
+        filter: brightness(100%)
+    }
+
+    .card1__img {
+        grid-area: 1 / 1 / 6 / 2;
     }
 }
