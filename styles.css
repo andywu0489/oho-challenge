@@ -83,8 +83,8 @@ a {
 .card__play {
   border: none;
   margin: 10px;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   background-color: white;
   display: flex;
   justify-content: center;
