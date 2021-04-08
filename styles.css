@@ -227,26 +227,32 @@ body {
 
   .card1__category {
     grid-area: 6/1/7/2;
+    color: #d21533;
   }
 
   .card1__title {
     grid-area: 7/1/8/2;
+    color: #d21533;
   }
 
   .card1__summary {
     grid-area: 8/1/9/2;
+    color: initial;
   }
 
   .card1__category,
 .card1__title,
 .card1__summary {
     width: 100%;
-    color: black;
-    margin-left: 0;
+    margin: 0;
   }
 
   .card1__img {
     background: url("./images/nature1.jpeg") no-repeat center/cover;
+  }
+
+  .fa-folder {
+    color: #222222;
   }
 }
 
