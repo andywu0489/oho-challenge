@@ -5,9 +5,10 @@ $gray: #222222;
     margin-right: 10px;
 }
 
-header {
+.page-info {
     font-family: 'Open Sans Condensed', sans-serif;
     width: 350px;
+    margin: 40px 0;
 }
 
 .card1__img {
@@ -41,19 +42,24 @@ header {
 }
 
 .card__category {
-    margin: 0;
-    color: $red;
-    font-family: 'Open Sans Condensed', sans-serif;
     grid-area: category;
 }
 
 .card__title {
-    margin: 0;
-    color: $red;
-    font-weight: bolder;
-    font-size: 30px;
-    font-family: 'Open Sans Condensed', sans-serif;
     grid-area: title;
+}
+
+.card__summary {
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+    grid-area: summary;
+}
+
+.card__category,
+.card__title {
+    color: $red;
+    margin: 0;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .arrow--red {
@@ -64,12 +70,6 @@ header {
 .arrow--gray {
     font-size: initial;
     color: $gray;
-}
-
-.card__summary {
-    margin: 0;
-    font-family: 'Cormorant Garamond', serif;
-    grid-area: summary;
 }
 
 .card__category>.fa-folder {
@@ -87,7 +87,7 @@ header {
 }
 
 body {
-    padding: 20px 150px;
+    padding: 0 150px 40px 150px;
 }
 
 .card {
@@ -134,25 +134,25 @@ body {
 }
 
 .card1__category {
-    margin: 0;
     display: flex;
     align-items: center;
-    font-family: 'Open Sans Condensed', sans-serif;
     grid-area: 5 / 1 / 6 / 2;
 }
 
 .card1__title {
-    margin: 0;
-    font-family: 'Open Sans Condensed', sans-serif;
     grid-area: 6 / 1 / 7 / 2;
 }
 
 .card1__summary {
-    margin: 0;
-    font-family: 'Open Sans Condensed', sans-serif;
     grid-area: 7 / 1 / 8 / 2;
 }
 
+.card1__category,
+.card1__title,
+.card1__summary {
+    margin: 0;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
 
 .card--big {
     display: grid;
@@ -169,8 +169,6 @@ body {
     color: white;
     margin-left: 40px;
 }
-
-
 
 .card--regular {
     width: 345px;
@@ -195,23 +193,18 @@ body {
     color: $red;
 }
 
-
-
-
-
-
-
-
-
-
 @media only screen and (max-width: 425px) {
+    .page-info {
+        margin: 60px 0 20px 0;
+    }
+
     body {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         min-width: 425px;
-        padding: 0;
+        padding: 0 0 40px 0;
         margin: 0;
     }
 
