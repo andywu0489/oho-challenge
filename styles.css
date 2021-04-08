@@ -99,7 +99,7 @@ body {
   padding: 0 150px 40px 150px;
 }
 
-.card {
+.card--height {
   height: 400px;
 }
 
@@ -147,10 +147,6 @@ body {
   grid-area: 6/1/7/2;
 }
 
-.big-card__summary {
-  grid-area: 7/1/8/2;
-}
-
 .big-card__category,
 .big-card__title,
 .big-card__summary {
@@ -161,7 +157,12 @@ body {
   margin: 0 0 0 40px;
 }
 
-.big-card {
+.big-card__summary {
+  grid-area: 7/1/8/2;
+  margin-top: 10px;
+}
+
+.card--large-layout {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(8, 1fr);
@@ -169,7 +170,7 @@ body {
   grid-row-gap: 0px;
 }
 
-.regular-card {
+.card--regular-layout {
   width: 100%;
   min-width: 350px;
   display: grid;
@@ -207,7 +208,7 @@ body {
     margin: 0;
   }
 
-  .regular-card {
+  .card--regular-layout {
     height: 75px;
     width: 345px;
     display: grid;
@@ -216,16 +217,16 @@ body {
     align-items: center;
   }
 
-  .regular-card > .card__summary {
+  .card--regular-layout > .card__summary {
     display: none;
   }
 
-  .regular-card > .card__image-container > .card__play {
+  .card--regular-layout > .card__image-container > .card__play {
     width: 25px;
     height: 25px;
   }
 
-  .regular-card > .card__img > .card__play > .fa-play {
+  .card--regular-layout > .card__img > .card__play > .fa-play {
     font-size: 10px;
   }
 
