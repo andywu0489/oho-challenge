@@ -8,6 +8,17 @@
 .big-card__image-container {
   grid-area: 1/1/9/2;
 }
+.big-card__image-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0));
+  opacity: 0.8;
+  border-radius: 3px;
+}
 
 a {
   text-decoration: none;
@@ -25,21 +36,12 @@ a {
   font-weight: normal;
 }
 
-.card--darken {
-  filter: brightness(50%);
-}
-
 .card__img {
   display: block;
   height: 100%;
   width: 100%;
   background-size: cover;
   border-radius: 3px;
-}
-
-.card__category {
-  grid-area: 7/1/8/2;
-  margin-top: 20px;
 }
 
 .card__title {
@@ -57,6 +59,11 @@ a {
   color: #d21533;
   margin: 0;
   font-family: "Open Sans Condensed", sans-serif;
+}
+
+.card__category {
+  grid-area: 7/1/8/2;
+  margin-top: 10px;
 }
 
 .arrow--red {
@@ -161,7 +168,7 @@ body {
   grid-row-gap: 0px;
 }
 
-.card--regular {
+.regular-card {
   width: 100%;
   min-width: 350px;
   display: grid;
@@ -199,7 +206,7 @@ body {
     margin: 0;
   }
 
-  .card--regular {
+  .regular-card {
     height: 75px;
     width: 345px;
     display: grid;
@@ -208,20 +215,28 @@ body {
     align-items: center;
   }
 
-  .card--regular > .card__summary {
+  .regular-card > .card__summary {
     display: none;
   }
 
-  .card--regular > .card__image-container > .card__play {
+  .regular-card > .card__image-container > .card__play {
     width: 25px;
     height: 25px;
   }
 
-  .card--regular > .card__img > .card__play > .fa-play {
+  .regular-card > .card__img > .card__play > .fa-play {
     font-size: 10px;
   }
 
+  .big-card__category,
+.big-card__title,
+.big-card__summary {
+    width: 100%;
+    margin: 0;
+  }
+
   .big-card__category {
+    margin-top: 25px;
     grid-area: 6/1/7/2;
     color: #d21533;
   }
@@ -234,13 +249,6 @@ body {
   .big-card__summary {
     grid-area: 8/1/9/2;
     color: initial;
-  }
-
-  .big-card__category,
-.big-card__title,
-.big-card__summary {
-    width: 100%;
-    margin: 0;
   }
 
   .fa-folder {
@@ -259,12 +267,12 @@ body {
     grid-area: 2/2/3/4;
   }
 
-  .card--darken {
-    filter: brightness(100%);
-  }
-
   .big-card__image-container {
     grid-area: 1/1/6/2;
+  }
+  .big-card__image-container::after {
+    background-image: initial;
+    opacity: initial;
   }
 }
 
