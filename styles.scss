@@ -109,11 +109,11 @@ body {
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas:
-        "card1 card1 card2"
-        "card3 card4 card5";
+        "card1 card1 card2 right-margin"
+        "card3 card4 card5 right-margin";
     grid-gap: 40px;
     align-items: center;
 }
@@ -136,6 +136,13 @@ body {
 
 .card5 {
     grid-area: card5;
+}
+
+.right-margin {
+    content: '';
+    grid-area: right-margin;
+    width: 110px;
+    height: 1px
 }
 
 .underline--red {
@@ -290,5 +297,9 @@ body {
             background-image: initial;
             opacity: initial;
         }
+    }
+
+    .right-margin {
+        display: none;
     }
 }
